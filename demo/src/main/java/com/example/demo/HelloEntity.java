@@ -6,7 +6,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
 
+@Component
 @Entity
 @Table(name="HELLOWORLD")
 public class HelloEntity {
@@ -28,8 +30,17 @@ public class HelloEntity {
     @Column(name="lang")
     private String lang;
     
-    
-    public Long getId() {
+    public HelloEntity(){
+		
+	}
+    public HelloEntity(Long id, String helloDifLeng, String lang) {
+		super();
+		this.id = id;
+		this.helloDifLeng = helloDifLeng;
+		this.lang = lang;
+	}
+
+	public Long getId() {
 		return id;
 	}
 
@@ -49,6 +60,11 @@ public class HelloEntity {
 	}
     public void sethelloDifLeng(String helloDifLeng) {
 		this.helloDifLeng = helloDifLeng;
+	}
+
+	@Override
+	public String toString() {
+		return "HelloEntity [helloDifLeng=" + helloDifLeng + ", id=" + id + ", lang=" + lang + "]";
 	}
 	
 
