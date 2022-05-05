@@ -1,6 +1,10 @@
-package com.example.demo;
+package com.example.demo.controller;
 
 import java.util.List;
+
+import com.example.demo.HelloEntity;
+import com.example.demo.repository.helloRepository;
+import com.example.demo.service.helloService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

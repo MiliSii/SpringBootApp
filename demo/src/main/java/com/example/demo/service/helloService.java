@@ -1,8 +1,10 @@
-package com.example.demo;
+package com.example.demo.service;
 
 
 import java.util.List;
 
+import com.example.demo.HelloEntity;
+import com.example.demo.repository.helloRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
