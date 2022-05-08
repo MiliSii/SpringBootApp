@@ -1,32 +1,43 @@
 package com.example.demo.service;
 
-
-import java.util.List;
-
-import com.example.demo.HelloEntity;
-import com.example.demo.repository.helloRepository;
-
 import org.springframework.beans.factory.annotation.Autowired;
-
+//import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
+import java.util.ArrayList;
+import java.util.List;
+import com.example.demo.model.HelloEntity;
+import com.example.demo.repository.HelloRepository;
 
 @Service
-public class helloService {
+public class HelloService {
 
-    @Autowired HelloEntity he;
-    @Autowired helloRepository er;
+    static List<HelloEntity> hellos = new ArrayList<>();
 
-    public helloService(){
+    @Autowired
+    HelloRepository helloRepository;
 
+    public List<HelloEntity> getHellos() {
+        return hellos;
     }
 
-    
-    public List<HelloEntity> findAll() {
-        return er.findAll();
+    public HelloEntity getHelloByLang(String lang) {
+        return helloRepository.findByLangIgnoreCase(lang);
     }
-/*
-    public List<HelloEntity> findEmployeesByName(String lang){
-        return er.findByEmployeename(lang);
-    }*/
+
+    public boolean saveToDB(HelloEntity hello) {
+        helloRepository.save(hello);
+        return true;
+    }
+
+    public List<HelloEntity> getHellosFromDB() {
+        return helloRepository.findAll();
+    }
+
+    public boolean isValid(HelloEntity hello) {
+        if (hello.getLang() == null || hello.gethelloDifLeng() == null) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

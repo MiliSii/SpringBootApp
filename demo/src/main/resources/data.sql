@@ -9,3 +9,4 @@ INSERT INTO `HELLOWORLD` (id,helloDifLeng,lang) VALUES(7,'Aloha honua','Hawaiian
 INSERT INTO `HELLOWORLD` (id,helloDifLeng,lang) VALUES(8,'Talofa le lalolagi','Samoan'); 
 INSERT INTO `HELLOWORLD` (id,helloDifLeng,lang) VALUES(9,'Saluton mondo','Esperanto'); 
 INSERT INTO `HELLOWORLD` (id,helloDifLeng,lang) VALUES(10,'Hei maailma','Finnish'); 
+
