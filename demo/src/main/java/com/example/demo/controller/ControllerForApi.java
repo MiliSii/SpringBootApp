@@ -1,18 +1,39 @@
 package com.example.demo.controller;
-
-import com.mashape.unirest.http.Unirest;
-import com.mashape.unirest.http.exceptions.UnirestException;
+/*
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;*/
 
 public class ControllerForApi {
+/*
+    
+        //String text = "Hello world!";
+        //Translated text: Hallo Welt!
+       // System.out.println("Translated text: " + translate("en", "de", text));
+    
 
-    // vraca{"message":"Invalid API key. Go to
-    // https:\/\/docs.rapidapi.com\/docs\/keys for more info."}
-    public void apii() throws UnirestException {
-        Unirest.post("https://text-translator2.p.rapidapi.com/translate")
-                .header("content-type", "application/x-www-form-urlencoded")
-                .header("X-RapidAPI-Host", "text-translator2.p.rapidapi.com")
-                .header("X-RapidAPI-Key", "feea51e1f8mshb59d11795041d0ep19bbe2jsne3a27e60ec21")
-                .body("source_language=en&target_language=id&text=Hello%20World")
-                .asString();
-    }
+    private static String translate(String langFrom, String langTo, String text) throws IOException {
+        // INSERT YOU URL HERE
+        String urlStr = "https://your.google.script.url" +
+                "?q=" + URLEncoder.encode(text, "UTF-8") +
+                "&target=" + langTo +
+                "&source=" + langFrom;
+        URL url = new URL(urlStr);
+        StringBuilder response = new StringBuilder();
+        HttpURLConnection con = (HttpURLConnection) url.openConnection();
+        con.setRequestProperty("User-Agent", "Mozilla/5.0");
+        BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+        String inputLine;
+        while ((inputLine = in.readLine()) != null) {
+            response.append(inputLine);
+        }
+        in.close();
+        return response.toString();
+    }*/ 
+       
+      
+
 }

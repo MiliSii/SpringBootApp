@@ -21,13 +21,13 @@ import org.springframework.validation.annotation.Validated;
 
 //import javax.validation.Valid;
 @RestController
-@RequestMapping("employees/")
-public class novikontroler {
+@RequestMapping("query")
+public class ControllerForQuery {
 
     @Autowired
     HelloService helloService;
 
-    @GetMapping("/videos")
+    @GetMapping("/hello")
     public ResponseEntity<List<HelloEntity>> getHello(@RequestParam(required = false) String lang) {
         if (lang == null) {
             return ResponseEntity.ok(helloService.getHellosFromDB());
@@ -41,10 +41,10 @@ public class novikontroler {
             throw new HelloNotFoundException();
         }
         return ResponseEntity.ok(foundHellos);
-
     }
 
-    @PostMapping("/videos")
+
+    @PostMapping("/hello")
     public ResponseEntity<String> addHellos(@Validated @RequestBody HelloEntity hello) {
         boolean hasAdded = helloService.saveToDB(hello);
         if (hasAdded) {
