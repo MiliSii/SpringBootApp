@@ -16,7 +16,6 @@ public class ControllerForApi {
     
 
     private static String translate(String langFrom, String langTo, String text) throws IOException {
-        // INSERT YOU URL HERE
         String urlStr = "https://your.google.script.url" +
                 "?q=" + URLEncoder.encode(text, "UTF-8") +
                 "&target=" + langTo +
