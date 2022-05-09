@@ -1,7 +1,8 @@
-package com.example.demo.web;
+package com.example.demo.controller;
 
+import com.example.demo.model.dto.MessageInputAdminDto;
 import com.example.demo.service.AdminInputMesaggeService;
-import com.example.demo.web.dto.MessageInputAdminDto;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;

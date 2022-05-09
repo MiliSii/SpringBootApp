@@ -1,9 +1,8 @@
 package com.example.demo.service;
 
 import com.example.demo.model.HelloEntity;
+import com.example.demo.model.dto.MessageInputAdminDto;
 import com.example.demo.repository.AdminRepository;
-import com.example.demo.web.dto.MessageInputAdminDto;
-
 
 import org.springframework.stereotype.Service;
 
