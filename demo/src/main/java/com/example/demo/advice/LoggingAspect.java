@@ -15,7 +15,10 @@ public class LoggingAspect {
 
   private static final Logger LOGGER = LogManager.getLogger(LoggingAspect.class);
 
-  
+
+  public LoggingAspect() {
+  }
+
   @Around("execution(* com.example.demo..*(..)))")
   public Object profileAllMethods(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
     MethodSignature methodSignature = (MethodSignature) proceedingJoinPoint.getSignature();
@@ -33,5 +36,7 @@ public class LoggingAspect {
 
     return result;
   }
+
+
 
 }
