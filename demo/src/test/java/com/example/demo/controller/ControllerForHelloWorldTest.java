@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.advice.controller.ControllerForHelloWorld;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
@@ -29,7 +30,7 @@ class ControllerForHelloWorldTest {
      void testControllerForHelloWorldExists() throws ClassNotFoundException {
         //tests whether class exists
 
-            Class a=Class.forName("com.example.demo.controller.ControllerForHelloWorld");
+            Class a=Class.forName("com.example.demo.advice.controller.ControllerForHelloWorld");
 
 
             Assert.assertNotEquals(a,null);

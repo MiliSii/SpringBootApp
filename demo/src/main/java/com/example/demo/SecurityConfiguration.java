@@ -38,7 +38,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeRequests().antMatchers("/").permitAll().and()
-                .authorizeRequests().antMatchers("/h2-console/**").permitAll();
+                .authorizeRequests().antMatchers("/h2-console/**").permitAll()
+                .and().authorizeRequests().antMatchers("/saveHello").permitAll()
+                .and().authorizeRequests().antMatchers("/GETHello").permitAll()
+                .and().authorizeRequests().antMatchers("/update/**").permitAll()
+                .and().authorizeRequests().antMatchers("/delete/**").permitAll()
+                .and().authorizeRequests().antMatchers("/GETHello1").permitAll()
+                .and().authorizeRequests().antMatchers("/albums").permitAll()
+                .and().authorizeRequests().antMatchers("/GETAlbums").permitAll();
+        ;
+
         httpSecurity.csrf().disable();
         httpSecurity.headers().frameOptions().disable();
         httpSecurity.authorizeRequests().antMatchers(
