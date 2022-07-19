@@ -16,6 +16,7 @@ public interface HelloRepository extends JpaRepository<HelloEntity, Long> {
 
     HelloEntity findByLangEndsWith(String lang);
 
+
     HelloEntity findBylang(String cao_svete);
 
     //HelloEntity findByLangContaining(String word);

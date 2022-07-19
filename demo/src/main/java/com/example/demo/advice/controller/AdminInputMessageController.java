@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.demo.advice.controller;
 
 import com.example.demo.model.dto.MessageInputAdminDto;
 import com.example.demo.service.AdminInputMesaggeService;

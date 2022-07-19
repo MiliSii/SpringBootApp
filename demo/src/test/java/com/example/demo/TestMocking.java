@@ -108,8 +108,6 @@ public class TestMocking {
         startTime = System.currentTimeMillis();
         System.out.println("end time is: " + startTime+"ms");
     }
-
-
 }
 
 
