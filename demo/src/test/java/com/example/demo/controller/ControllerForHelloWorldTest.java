@@ -33,6 +33,7 @@ class ControllerForHelloWorldTest {
             assert false : "Test failed - class does not exist";
             e.printStackTrace();
         }
+
     }
 
     @Test

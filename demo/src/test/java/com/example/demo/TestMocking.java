@@ -41,7 +41,6 @@ public class TestMocking {
         helloEntity = mock(HelloEntity.class);
         when(helloEntity.getLang()).thenReturn("English");
         when(helloEntity.gethelloDifLeng()).thenReturn("Hello World");
-
     }
 
     @Test
