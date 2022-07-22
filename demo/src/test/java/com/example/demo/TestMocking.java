@@ -54,6 +54,7 @@ public class TestMocking {
             assert false : "Test failed - class does not exist";
             e.printStackTrace();
         }
+
     }
 
     @Test

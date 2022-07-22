@@ -10,6 +10,5 @@ public class JUnitSetUp {
             String str = "Junit is working fine";
             assertEquals("Junit is working fine",str);
         }
-
     }
 
